@@ -1,0 +1,151 @@
+.app {
+  --bg-color-1: #9db3ed;
+  --bg-color-2: #f9f9f9;
+  --text-color-1: #0b1537;
+  --text-color-2: #636363;
+}
+
+.app[data-theme="dark"] {
+  --bg-color-1: #172d67;
+  --bg-color-2: #050c26;
+  --text-color-1: #fbfcfc;
+  --text-color-2: #bbbcbc;
+}
+
+.app {
+  background: linear-gradient(90deg, rgb(27 178 184), rgb(159 208 150));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.app_calculator {
+  height: 500px;
+  width: 290px;
+  border-radius: 25px;
+  box-shadow: 0 0 0.4rem rgb(0, 0, 0);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.app_calculator_navbar {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  min-height: 40px;
+  width: 100%;
+  padding: 10px;
+  gap: 15px;
+  align-items: center;
+}
+
+.app_calculator_navbar img {
+  height: 25px;
+  width: 25px;
+}
+
+.app_calculator_navbar_toggle {
+  height: 16px;
+  width: 36px;
+  border-radius: 20px;
+  background-color: rgb(250, 250, 250, 0.6);
+}
+
+.app_calculator_navbar_toggle_circle {
+  height: 16px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: black;
+  transition: 300ms;
+}
+
+.app_calculator_navbar_toggle_circle_active {
+  margin-left: 21px;
+}
+
+.header {
+  flex: 1;
+  background-color: var(--bg-color-1);
+  padding: 20px;
+  overflow-y: scroll;
+}
+
+.header p {
+  font-size: 1rem;
+  line-height: 1.875rem;
+  color: var(--text-color-1);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header_expression {
+  overflow-x: scroll;
+  width: 100%;
+  min-height: 30px;
+}
+
+.header_expression p {
+  width: fit-content;
+  white-space: nowrap;
+  min-width: 100%;
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+
+.header_result {
+  font-weight: bold;
+  font-size: 1.5rem !important;
+  min-height: 30px;
+}
+
+.keypad {
+  flex: 1.3;
+  background-color: var(--bg-color-2);
+  padding: 20px;
+  display: flex;
+}
+
+.keypad p {
+  line-height: 1.875rem;
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color-2);
+  transition: 70ms;
+  user-select: none;
+  cursor: pointer;
+}
+
+.keypad p:active {
+  background-color: rgba(0, 0, 0, 0.14);
+  border-radius: 50%;
+}
+
+.keypad_keys {
+  flex: 3;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.keypad_symbols {
+  flex: 1;
+}
+
+.keypad_keys p {
+  width: 33%;
+  height: 10%;
+}
+
+.keypad_symbols p {
+  height: 12%;
+  width: 100%;
+  color: #109bd6;
+  font-size: 1.5rem;
+  line-height: 1.1rem;
+}
